@@ -2,7 +2,7 @@ from DB_Connector import *
 
 
 def add_book_func():
-    bookclass = {
+    addbook = {
         "BookName": input("Book name: "),
         "AuthorName": input("Author name: "),
         "ShortSinopse": input("Short sinopse: "),
@@ -14,8 +14,8 @@ def add_book_func():
     }
 
     sql = "INSERT INTO Book(BookName, AuthorName, ShortSinopse, PublishingCompany, PublicationYear, Genre, Volume, " \
-          "Rating) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
-    val = list(bookclass.values())
+          "Rating) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+    val = list(addbook.values())
 
     mylibcursor.execute(sql, val)
 

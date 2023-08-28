@@ -1,10 +1,5 @@
-import mysql.connector
+import sqlite3
 
-mylibdb = mysql.connector.connect(
-    host="localhost",
-    user="Joca",
-    password="6r72Jo^#HBU6",
-    database="mylibdatabase"
-)
+mylibdb = sqlite3.connect("mylibdatabase.db")
 
 mylibcursor = mylibdb.cursor()

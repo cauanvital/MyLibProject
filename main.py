@@ -1,6 +1,5 @@
-from DB_Creator import *
+from Table_Creator import *
 
-database_creator()
 tables_generator()
 
 from AddBook import *
