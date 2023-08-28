@@ -1,19 +1,24 @@
 from DB_Connector import *
 
 
-def add_author_func():
-    bookclass = {
-        "AuthorName": input("Author name: "),
-        "ShortBiography": input("Short biography: "),
-        "BirthYear": input("Author birth year: "),
-        "WritingGenre": input("Writing genre: "),
-        "Nationality": input("Author nationality: ")
-    }
+class Author:
+    def __init__(self, authorname, shortbiography, birthyear, writinggenre, nationality):
+        self.authorname = authorname
+        self.shortbiography = shortbiography
+        self.birthyear = birthyear
+        self.writinggenre = writinggenre
+        self.nationality = nationality
 
-    sql = "INSERT INTO Author(AuthorName, ShortBiography, BirthYear, WritingGenre, Nationality)" \
-          "VALUES (?, ?, ?, ?, ?)"
-    val = list(bookclass.values())
+    def add_author_func(self):
+        sql = "INSERT INTO Author(AuthorName, ShortBiography, BirthYear, WritingGenre, Nationality)" \
+              "VALUES (?, ?, ?, ?, ?)"
+        val = [
+            self.authorname,
+            self.shortbiography,
+            self.birthyear,
+            self.writinggenre,
+            self.nationality
+        ]
 
-    mylibcursor.execute(sql, val)
-
-    mylibdb.commit()
+        mylibcursor.execute(sql, val)
+        mylibdb.commit()

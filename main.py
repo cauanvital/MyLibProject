@@ -16,9 +16,26 @@ while i != 0:
         i = int(input("Insira sua escolha: "))
 
     if i == 1:
-        add_book_func()
+        newbook = Book(
+                input("Book name: "),
+                input("Author name: "),
+                input("Short sinopse: "),
+                input("Publishing company: "),
+                input("Publication year: "),
+                input("Book genre: "),
+                input("Book volume: "),
+                input("Rate the book between 1 and 5: ")
+        )
+        newbook.add_book_func()
     elif i == 2:
-        add_author_func()
+        newauthor = Author(
+            input("Author name: "),
+            input("Short biography: "),
+            input("Author birth year: "),
+            input("Writing genre: "),
+            input("Author nationality: ")
+        )
+        newauthor.add_author_func()
     else:
         print("Tenha um bom dia")
         break
