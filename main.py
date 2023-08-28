@@ -20,5 +20,5 @@ while i != 0:
     elif i == 2:
         add_author_func()
     else:
-        print("Tenha um bom dia!")
+        print("Tenha um bom dia")
         break
