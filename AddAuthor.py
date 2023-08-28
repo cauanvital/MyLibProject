@@ -11,7 +11,7 @@ def add_author_func():
     }
 
     sql = "INSERT INTO Author(AuthorName, ShortBiography, BirthYear, WritingGenre, Nationality)" \
-          "VALUES (%s, %s, %s, %s, %s)"
+          "VALUES (?, ?, ?, ?, ?)"
     val = list(bookclass.values())
 
     mylibcursor.execute(sql, val)
