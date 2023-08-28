@@ -2,8 +2,8 @@ from Table_Creator import *
 
 tables_generator()
 
-from AddBook import *
-from AddAuthor import *
+from BookClass import *
+from AuthorClass import *
 
 i = None
 
