@@ -1,0 +1,72 @@
+<MyGridLayout>
+
+    bookname: bookname
+    authorname: authorname
+    shortsinopse: shortsinopse
+    publishingcompany: publishingcompany
+    publicationyear: publicationyear
+    genre: genre
+    volume: volume
+    rating: rating
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Book name:"
+            TextInput:
+                id: bookname
+                multiline: False
+
+            Label:
+                text: "Author name:"
+            TextInput:
+                id: authorname
+                multiline: False
+
+            Label:
+                text: "Short sinopse:"
+            TextInput:
+                id: shortsinopse
+                multiline: False
+
+            Label:
+                text: "Publishing company:"
+            TextInput:
+                id: publishingcompany
+                multiline: False
+
+            Label:
+                text: "Publication year:"
+            TextInput:
+                id: publicationyear
+                multiline: False
+
+            Label:
+                text: "Book genre:"
+            TextInput:
+                id: genre
+                multiline: False
+
+            Label:
+                text: "Book volume:"
+            TextInput:
+                id: volume
+                multiline: False
+
+            Label:
+                text: "Book rating:"
+            TextInput:
+                id: rating
+                multiline: False
+
+        Button:
+            text: "Submit"
+            font_size: 32
+            size_hint_y: None
+            height: root.height / 6
+            on_press: root.press()
